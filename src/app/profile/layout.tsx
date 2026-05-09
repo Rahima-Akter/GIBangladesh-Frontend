@@ -12,7 +12,7 @@ export default function ProfileLayout({ children }: { children: React.ReactNode 
             <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
             {/* Mobile/Tablet Header */}
-            <div className="lg:hidden flex items-center justify-between h-16 px-6 border-b border-outline-variant bg-surface-container-low dark:bg-on-surface sticky top-0 z-30">
+            <div className="lg:hidden flex items-center justify-between h-16 px-6 border-b border-gray-400 dark:border-gray-700 bg-surface-container-low dark:bg-on-surface sticky top-0 z-30">
                 <div className="flex items-center gap-3">
                     <button
                         onClick={() => setIsSidebarOpen(true)}

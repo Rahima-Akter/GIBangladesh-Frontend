@@ -17,7 +17,7 @@ export default function MyBlogs() {
                 </div>
                 {/* <!-- Stats Overview (Asymmetric Layout) --> */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-lg mb-2xl">
-                    <div className="md:col-span-8 bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl p-lg flex items-center gap-xl">
+                    <div className="md:col-span-8 bg-surface dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/50 rounded-xl p-lg flex items-center gap-xl">
                         <div className="h-24 w-24 rounded-full overflow-hidden shrink-0 bg-surface-container dark:bg-on-surface-variant/10">
                             <img alt="Author Workspace" className="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA" />
                         </div>
@@ -30,42 +30,42 @@ export default function MyBlogs() {
                             </div>
                         </div>
                     </div>
-                    <div className="md:col-span-4 bg-primary-container dark:bg-primary-fixed text-on-primary-container dark:text-on-primary-fixed rounded-xl p-lg flex flex-col justify-between">
-                        <span className="material-symbols-outlined text-3xl">trending_up</span>
+                    <div className="md:col-span-4 bg-primary-container dark:bg-[#7f8397] text-on-primary-container dark:text-on-primary-fixed rounded-xl p-lg flex flex-col justify-between">
+                        <span className="material-symbols-outlined text-3xl dark:text-white">trending_up</span>
                         <div>
-                            <div className="text-h2 font-h2">24.5k</div>
-                            <div className="font-label-md text-label-md opacity-80">Total Post Views</div>
+                            <div className="text-h2 font-h2 dark:text-gray-200">24.5k</div>
+                            <div className="font-label-md text-label-md opacity-80 dark:text-white">Total Post Views</div>
                         </div>
                     </div>
                 </div>
                 {/* <!-- Filters & Search --> */}
                 <div className="flex flex-wrap items-center justify-between gap-md mb-lg">
                     <div className="flex gap-sm">
-                        <button className="px-md py-sm bg-surface-container-high dark:bg-on-surface-variant/20 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md dark:text-inverse-on-surface cursor-pointer">All Posts</button>
-                        <button className="px-md py-sm bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md text-on-surface-variant dark:text-outline-variant cursor-pointer">Published</button>
-                        <button className="px-md py-sm bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md text-on-surface-variant dark:text-outline-variant cursor-pointer">Drafts</button>
+                        <button className="px-md py-sm bg-surface-container-high dark:bg-on-surface-variant/20 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md dark:text-inverse-on-surface cursor-pointer hover:font-extrabold transition-all duration-500">All Posts</button>
+                        <button className="px-md py-sm bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md text-on-surface-variant dark:text-outline-variant cursor-pointer hover:font-extrabold transition-all duration-500">Published</button>
+                        <button className="px-md py-sm bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md text-on-surface-variant dark:text-outline-variant cursor-pointer hover:font-extrabold transition-all duration-500">Drafts</button>
                     </div>
                     <div className="relative min-w-[300px]">
-                        <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline dark:text-on-surface-variant/50">search</span>
-                        <input className="w-full bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg pl-[44px] pr-md py-sm font-body-sm text-body-sm focus:ring-2 focus:ring-primary/20 outline-none dark:text-inverse-on-surface" placeholder="Search your blogs..." type="text" />
+                        <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline dark:text-gray-300">search</span>
+                        <input className="w-full bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/50 rounded-lg pl-[44px] pr-md py-sm font-body-sm text-body-sm focus:ring-2 focus:ring-primary/20 outline-none dark:text-inverse-on-surface" placeholder="Search your blogs..." type="text" />
                     </div>
                 </div>
                 {/* <!-- Bento Grid / List View --> */}
                 <div className="space-y-md">
                     {/* <!-- Blog Item 1 --> */}
-                    <div className="bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl p-md flex flex-col md:flex-row items-center gap-lg hover:border-primary dark:hover:border-primary-fixed-dim transition-colors group">
+                    <Link href="#" className="bg-surface dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/50 rounded-xl p-md flex flex-col md:flex-row items-center gap-lg hover:border-primary dark:hover:border-on-surface-variant transition-colors group cursor-pointer">
                         <div className="w-full md:w-32 h-24 bg-surface-container-high dark:bg-on-surface-variant/20 rounded-lg overflow-hidden shrink-0">
                             <div className="w-full h-full bg-surface-variant flex items-center justify-center" data-alt="A macro photograph of intricate Jamdani weaving patterns on fine fabric. The lighting is soft and directional, highlighting the golden threads against a deep navy background. The style is professional and elegant, maintaining a clean light-mode aesthetic with high contrast." style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtbF7Z5GHkGyKUiQ3IzwZKDCZ0Xz6HiGVySa9ml_O02zUxys9EIWbqA3XLLCNZpUvKPU6VUlFFZQ0bTXefWs633PQBfycoa81drLCbPaBv1MrehKx4RdBjkU8VxOtdGwP6uFjENeDLv47vdpZ2mqHCweqa2V6ZwAI0qfP1jiikFxQ0nJiPaFIGqheBFP_qEPDcq5KOARsAgNEQej8A0otrrgk918Zyis90nS4TPNuVi1dsT5lKX5A004hicFU4bxd3-UBoLlXwGnw')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-sm mb-xs">
                                 <span className="px-xs py-[2px] bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded font-label-sm text-[10px] uppercase tracking-tighter">Published</span>
-                                <span className="text-outline dark:text-on-surface-variant/50 font-body-sm text-body-sm">Oct 12, 2024</span>
+                                <span className="text-outline dark:text-gray-400 font-body-sm text-body-sm">Oct 12, 2024</span>
                             </div>
                             <h4 className="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface group-hover:text-primary dark:group-hover:text-primary-fixed-dim transition-colors">Preserving the Art of Jamdani: A National Heritage</h4>
                             <div className="flex items-center gap-md mt-sm text-outline dark:text-on-surface-variant/50 font-body-sm text-body-sm">
-                                <span className="flex items-center gap-xs"><span className="material-symbols-outlined text-[18px]">visibility</span> 1.2k views</span>
-                                <span className="flex items-center gap-xs"><span className="material-symbols-outlined text-[18px]">chat_bubble</span> 24 comments</span>
+                                <span className="flex items-center gap-xs dark:text-gray-400"><span className="material-symbols-outlined text-[18px]">visibility</span> 1.2k views</span>
+                                <span className="flex items-center gap-xs dark:text-gray-400"><span className="material-symbols-outlined text-[18px]">chat_bubble</span> 24 comments</span>
                             </div>
                         </div>
                         <div className="flex gap-sm w-full md:w-auto">
@@ -79,7 +79,7 @@ export default function MyBlogs() {
                                 <span className="material-symbols-outlined">delete</span>
                             </button>
                         </div>
-                    </div>
+                    </Link>
                     {/* <!-- Blog Item 2 --> */}
                     <div className="bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl p-md flex flex-col md:flex-row items-center gap-lg hover:border-primary dark:hover:border-primary-fixed-dim transition-colors group">
                         <div className="w-full md:w-32 h-24 bg-surface-container-high dark:bg-on-surface-variant/20 rounded-lg overflow-hidden shrink-0">

@@ -4,7 +4,6 @@ export default function Saved() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-md mb-2xl">
             <div>
                 <h1 className="font-h1 md:text-h2 text-[20px] text-on-surface dark:text-inverse-on-surface">Your Collection</h1>
-                <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">A curated list of your favorite GI products and heritage stories</p>
             </div>
             <div className="flex bg-surface-container dark:bg-on-surface-variant/10 p-1 rounded-xl border border-outline-variant dark:border-on-surface-variant/30">
                 <button className="px-md py-sm bg-white dark:bg-on-surface text-primary dark:text-primary-fixed-dim rounded-lg font-label-md text-label-md shadow-sm transition-all cursor-pointer">All Saved</button>
@@ -25,14 +24,14 @@ export default function Saved() {
                 </div>
             </div>
             <div className="relative min-w-[260px]">
-                <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline dark:text-on-surface-variant/50">search</span>
-                <input className="w-full bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg pl-[44px] pr-md py-sm font-body-sm text-body-sm focus:ring-2 focus:ring-primary/20 outline-none dark:text-inverse-on-surface" placeholder="Search collection..." type="text" />
+                <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline dark:text-on-gray-400">search</span>
+                <input className="w-full bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/50 rounded-lg pl-[44px] pr-md py-sm font-body-sm text-body-sm focus:ring-2 focus:ring-primary/20 outline-none dark:text-inverse-on-surface" placeholder="Search collection..." type="text" />
             </div>
         </div>
         {/* <!-- Bento Grid Gallery --> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
             {/* <!-- Product Card 1 --> */}
-            <div className="bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl overflow-hidden group hover:border-primary dark:hover:border-primary-fixed-dim transition-all">
+            <div className="bg-surface dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/50 rounded-xl overflow-hidden group hover:border-primary dark:hover:border-on-surface-variant transition-all">
                 <div className="aspect-[4/3] relative overflow-hidden">
                     <img alt="Rajshahi Silk" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of fine Rajshahi Silk fabric with a soft golden sheen. The texture is smooth and luxurious, draped elegantly to show its lightweight quality. The lighting is warm and cinematic, highlighting the natural richness of the silk." src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA" />
                     <button className="absolute top-md right-md p-sm bg-white/90 dark:bg-on-surface/90 backdrop-blur-sm rounded-full text-primary dark:text-primary-fixed-dim shadow-sm hover:scale-110 transition-transform cursor-pointer">

@@ -51,11 +51,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       <aside
         className={cn(
-          "fixed left-0 top-0 z-50 h-screen w-64 border-r border-outline-variant bg-surface-container-low dark:bg-on-surface flex flex-col transition-transform duration-300 ease-in-out lg:translate-x-0",
+          "fixed left-0 top-0 z-50 h-screen w-64 border-r border-outline-variant dark:border-gray-800 bg-surface-container-low dark:bg-on-surface flex flex-col transition-transform duration-300 ease-in-out lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="flex h-16 items-center justify-between border-b border-outline-variant px-6">
+        <div className="flex h-16 items-center justify-between border-b border-outline-variant dark:border-gray-800 px-6">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded bg-primary flex items-center justify-center text-on-primary font-bold">
               G
@@ -71,7 +71,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
 
         <div className="flex-1 overflow-y-auto p-4 space-y-1">
-          <p className="px-2 pb-2 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">Main Menu</p>
+          <p className="px-2 pb-2 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60 dark:text-gray-300">Main Menu</p>
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -94,7 +94,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           })}
         </div>
 
-        <div className="p-4 border-t border-outline-variant space-y-4">
+        <div className="p-4 border-t border-outline-variant dark:border-gray-800 space-y-4">
           {/* Theme Toggle in Sidebar */}
           <button
             onClick={toggleTheme}
