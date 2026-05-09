@@ -1,53 +1,90 @@
 export default function Saved() {
     return <main className="lg:ml-64 grow p-xl -mt-2">
         {/* <!-- Tab Navigation & Filters --> */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-md mb-xl border-b border-outline-variant">
-            <div className="flex gap-lg">
-                <button className="pb-md border-b-2 border-primary text-primary font-bold font-label-md text-label-md">All Items</button>
-                <button className="pb-md border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">Products</button>
-                <button className="pb-md border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md">Blogs</button>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-md mb-2xl">
+            <div>
+                <h1 className="font-h1 md:text-h2 text-[20px] text-on-surface dark:text-inverse-on-surface">Your Collection</h1>
+                <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">A curated list of your favorite GI products and heritage stories</p>
             </div>
-            <div className="flex items-center gap-sm mb-md">
-                <div className="relative">
-                    <input className="bg-surface border border-outline-variant rounded-lg px-md py-sm text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all w-64" placeholder="Search saved items..." type="text" />
-                    <span className="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+            <div className="flex bg-surface-container dark:bg-on-surface-variant/10 p-1 rounded-xl border border-outline-variant dark:border-on-surface-variant/30">
+                <button className="px-md py-sm bg-white dark:bg-on-surface text-primary dark:text-primary-fixed-dim rounded-lg font-label-md text-label-md shadow-sm transition-all cursor-pointer">All Saved</button>
+                <button className="px-md py-sm text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-all cursor-pointer">Products</button>
+                <button className="px-md py-sm text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-all cursor-pointer">Stories</button>
+            </div>
+        </div>
+        {/* <!-- Filter & Search --> */}
+        <div className="flex flex-wrap items-center justify-between gap-md mb-lg">
+            <div className="flex gap-sm">
+                <div className="px-md py-sm bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md text-on-surface-variant dark:text-outline-variant flex items-center gap-sm cursor-pointer">
+                    <span className="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filter
                 </div>
+                <div className="px-md py-sm bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg font-label-md text-label-md text-on-surface-variant dark:text-outline-variant flex items-center gap-sm cursor-pointer">
+                    <span className="material-symbols-outlined text-[18px]">sort</span>
+                    Recently Added
+                </div>
+            </div>
+            <div className="relative min-w-[260px]">
+                <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline dark:text-on-surface-variant/50">search</span>
+                <input className="w-full bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-lg pl-[44px] pr-md py-sm font-body-sm text-body-sm focus:ring-2 focus:ring-primary/20 outline-none dark:text-inverse-on-surface" placeholder="Search collection..." type="text" />
             </div>
         </div>
         {/* <!-- Bento Grid Gallery --> */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-lg">
-            {/* Blog Post Card */}
-            <div className="md:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group">
-                <div className="h-48 relative">
-                    <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality editorial photograph of traditional Bangladeshi pottery being shaped on a wheel. The focus is on the clay-covered hands of the potter, highlighting the intricate movement. The lighting is dramatic, high-contrast, and focused on the center of the wheel. The color palette is earthy with deep terracotta and muted blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh42LC6NeQp0QVGeJfjHxJ9NKIfzseqUz7qETWbgfZvcIJuK_X1etyESqgrHzBNzomZ0UziIJ-ZJG1Lutkkpj4sUw3wi0UoYIxkLkS8kOTu8jGDAwuFcqWHQgORLuZHsHIK26pkNZvPm3omaqg-C1DQBEyEfIahyOIPfNa1e16SyJ1pDWPCzboug0vs5ylsQ1E3Ps_f0sKWC2cCXX93rV0WZ7vXNNWXbTH_aE9Vfea10US0B7vHdogXw1EQulVQZOZZk11eZQ9Eo4" />
-                    <button className="absolute top-md right-md bg-white/90 p-sm rounded-full text-primary hover:text-error transition-all">
-                        <span className="material-symbols-outlined" data-icon="bookmark" style={{ fontVariationSettings: "FILL" }}>bookmark</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+            {/* <!-- Product Card 1 --> */}
+            <div className="bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl overflow-hidden group hover:border-primary dark:hover:border-primary-fixed-dim transition-all">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                    <img alt="Rajshahi Silk" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of fine Rajshahi Silk fabric with a soft golden sheen. The texture is smooth and luxurious, draped elegantly to show its lightweight quality. The lighting is warm and cinematic, highlighting the natural richness of the silk." src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA" />
+                    <button className="absolute top-md right-md p-sm bg-white/90 dark:bg-on-surface/90 backdrop-blur-sm rounded-full text-primary dark:text-primary-fixed-dim shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                        <span className="material-symbols-outlined fill-1" data-icon="bookmark">bookmark</span>
                     </button>
                 </div>
-                <div className="p-lg">
-                    <div className="text-label-sm font-label-sm text-primary mb-xs">Culture &amp; Heritage</div>
-                    <h4 className="font-body-lg font-bold text-on-background mb-sm leading-tight">Preserving the Clay Artisans of Bijoypur</h4>
-                    <p className="text-body-sm font-body-sm text-on-surface-variant mb-md">Exploring the unique terracotta traditions and the GI status of Bijoypur Pottery.</p>
-                    <div className="flex items-center gap-sm">
-                        <span className="material-symbols-outlined text-[18px] text-outline" data-icon="schedule">schedule</span>
-                        <span className="text-label-sm font-label-sm text-outline">5 min read</span>
+                <div className="p-md">
+                    <div className="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-tighter mb-xs">Clothing & Textile</div>
+                    <h3 className="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface mb-sm">Premium Rajshahi Silk Saree</h3>
+                    <div className="flex items-center justify-between">
+                        <span className="font-h3 text-primary dark:text-primary-fixed-dim">৳ 12,500</span>
+                        <button className="px-md py-xs bg-primary-container dark:bg-primary-fixed text-white dark:text-on-primary-fixed rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all cursor-pointer">
+                            View Details
+                        </button>
                     </div>
                 </div>
             </div>
-            {/* <!-- Another Product Card --> */}
-            <div className="md:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group">
-                <div className="h-48 relative">
-                    <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up high-resolution product shot of Nakshi Kantha, a traditional embroidered quilt from Bangladesh. The image shows the intricate stitching patterns of mythological figures and nature. The lighting is bright and even, showcasing every thread detail. The background is a minimalist light grey, maintaining the professional design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFr-32nQqQMHWwxwo-OogG5bDE5p1RO_VBtO1nE6pfwOjX0ddDw6YiS1Kzg_-0WTv35poe2ctFuICrvn4TFfGW5nVZAZQaJfINZgwLLekq2bx4L9dQKhBPg1a3LS9tMtHWrFQZSQwEgomPeyqVJgrsDvPXP3cAYSR2szhnA19uVZza5toV_8aDcNWujYXmjiRkOeZJZi4xPJ_-54yCkg1GwMTw8ZQpi3jCYnDnEPIRR0yMY15N9uym8aVEAB-OnE-QtYr13LpEvWk" />
-                    <button className="absolute top-md right-md bg-white/90 p-sm rounded-full text-primary hover:text-error transition-all">
-                        <span className="material-symbols-outlined" data-icon="bookmark" style={{ fontVariationSettings: 'FILL' }}>bookmark</span>
+            {/* <!-- Product Card 2 --> */}
+            <div className="bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl overflow-hidden group hover:border-primary dark:hover:border-primary-fixed-dim transition-all">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                    <img alt="Natore Kanchagolla" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of Natore's famous Kanchagolla, a traditional Bangladeshi sweet made from pure milk solids. The texture is soft and grainy, presented in an artisanal clay bowl. The lighting is soft and appetizing, focusing on the delicacy's authentic quality." src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA" />
+                    <button className="absolute top-md right-md p-sm bg-white/90 dark:bg-on-surface/90 backdrop-blur-sm rounded-full text-primary dark:text-primary-fixed-dim shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                        <span className="material-symbols-outlined fill-1" data-icon="bookmark">bookmark</span>
                     </button>
                 </div>
-                <div className="p-lg">
-                    <h4 className="font-body-lg font-bold text-on-background mb-xs">Nakshi Kantha Quilt</h4>
-                    <div className="text-label-sm font-label-sm text-on-surface-variant mb-md">Jessore Region Heritage</div>
+                <div className="p-md">
+                    <div className="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-tighter mb-xs">Sweets & Dairy</div>
+                    <h3 className="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface mb-sm">Authentic Natore Kanchagolla</h3>
                     <div className="flex items-center justify-between">
-                        <span className="text-primary font-bold">Tk 12,500</span>
-                        <button className="text-primary font-bold hover:underline font-label-md text-label-md">Shop Now</button>
+                        <span className="font-h3 text-primary dark:text-primary-fixed-dim">৳ 850 /kg</span>
+                        <button className="px-md py-xs bg-primary-container dark:bg-primary-fixed text-white dark:text-on-primary-fixed rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all cursor-pointer">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {/* <!-- Story Card --> */}
+            <div className="bg-surface dark:bg-on-surface border border-outline-variant dark:border-on-surface-variant/30 rounded-xl overflow-hidden group hover:border-primary dark:hover:border-primary-fixed-dim transition-all">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                    <img alt="Sitalpati Weaving" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elderly artisan's hands carefully weaving a Sitalpati mat, showcasing the intricate geometric patterns. The natural cane strips reflect soft daylight, emphasizing the patience and skill involved in this traditional craft. The atmosphere is one of deep heritage and focused artistry." src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA" />
+                    <button className="absolute top-md right-md p-sm bg-white/90 dark:bg-on-surface/90 backdrop-blur-sm rounded-full text-primary dark:text-primary-fixed-dim shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                        <span className="material-symbols-outlined fill-1" data-icon="bookmark">bookmark</span>
+                    </button>
+                </div>
+                <div className="p-md">
+                    <div className="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-tighter mb-xs">Heritage Story</div>
+                    <h3 className="font-h3 text-h3 text-on-surface dark:text-inverse-on-surface mb-sm">The Cooling Touch of Sitalpati: Sylhet's Green Legacy</h3>
+                    <div className="flex items-center justify-between">
+                        <span className="font-body-sm text-on-surface-variant dark:text-outline-variant">8 min read</span>
+                        <button className="px-md py-xs border border-primary dark:border-primary-fixed-dim text-primary dark:text-primary-fixed-dim rounded-lg font-label-sm text-label-sm hover:bg-primary/5 dark:hover:bg-primary-fixed-dim/5 transition-all cursor-pointer">
+                            Read Article
+                        </button>
                     </div>
                 </div>
             </div>

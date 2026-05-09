@@ -1,119 +1,137 @@
 "use client";
 import { IconEye, IconEyeClosed } from "@tabler/icons-react";
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Settings() {
     const [showCurrent, setShowCurrent] = useState(false);
     const [showNew, setShowNew] = useState(false);
 
-
-    return <main className="lg:ml-64 flex-grow p-xl">
-        <div className="max-w-4xl mx-auto">
-            <h1 className="font-h1 text-h3 text-on-background dark:text-white mb-sm">Edit Profile</h1>
-
-            <div className="grid grid-cols-12 gap-lg">
-                {/* <!-- Profile Picture Upload Card --> */}
-                <div className="col-span-12 md:col-span-4">
-                    {/* Profile Image Section */}
-                    <div className="bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-xl p-lg flex flex-col items-center text-center">
-                        <div className="relative w-32 h-32 mb-md group">
-                            <img
-                                alt="Profile Avatar"
-                                className="w-full h-full rounded-full object-cover border-4 border-surface dark:border-on-surface shadow-sm"
-                                src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA"
-                            />
-                            <button className="absolute bottom-0 right-0 bg-primary text-on-primary p-xs rounded-full border-2 border-surface dark:border-on-surface shadow-md">
-                                <span className="material-symbols-outlined text-[20px]">photo_camera</span>
-                            </button>
-                        </div>
-                        <h3 className="font-h3 text-body-lg font-bold mb-xs">Profile Image</h3>
-                        <p className="font-body-sm text-on-surface-variant mb-md">JPG, GIF, or PNG. Maximum size 800 KB</p>
-                        <button className="w-full border border-primary text-primary px-md py-sm rounded-lg font-label-md hover:bg-primary/5 transition-all">Upload New</button>
+    return (
+        <main className="lg:ml-64 grow p-xl">
+            <div className="max-w-4xl mx-auto">
+                <div className="flex justify-between items-end mb-2xl">
+                    <div>
+                        <h1 className="font-h1 md:text-h2 text-[20px] text-on-surface dark:text-inverse-on-surface">Account Settings</h1>
+                        <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant text-sm mt-xs">Update your profile information and manage your security preferences</p>
                     </div>
-
-                    {/* Delete Account Section */}
-                    <div className="bg-surface-container dark:bg-on-surface border border-outline-variant rounded-xl p-md mt-5 flex items-center gap-md">
-                        <button className="bg-error-container hover:bg-error/10 transition-colors cursor-pointer text-on-error-container p-md rounded-xl">
-                            <span className="material-symbols-outlined">delete_forever</span>
-                            <h4 className="font-h3 text-[12px] font-bold">Delete Account</h4>
-                        </button>
-                        <div className="grow">
-                            <p className="font-body-sm text-on-surface-variant">Permanently delete your profile and all associated data.</p>
-                        </div>
-                        {/* <button className="text-error font-label-md hover:underline">Manage</button> */}
-                    </div>
+                    <button className="bg-primary dark:bg-primary-fixed text-on-primary dark:text-on-primary-fixed px-lg py-sm rounded-lg font-label-md text-sm hover:opacity-90 transition-all shadow-sm cursor-pointer">
+                        Save Changes
+                    </button>
                 </div>
-                {/* <!-- Details Form Card --> */}
-                <div className="col-span-12 md:col-span-8">
-                    <div className="bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-xl p-lg">
-                        <form className="space-y-lg">
-                            {/* <!-- Name & Email Grid --> */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
-                                <div className="flex flex-col gap-xs">
-                                    <label className="font-label-md text-on-surface-variant">Full Name</label>
-                                    <input className="bg-surface border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md" type="text" value="Arif Rahman" />
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+                    {/* <!-- Profile Picture Section --> */}
+                    <div className="lg:col-span-4 space-y-lg">
+                        <div className="bg-white dark:bg-on-surface p-xl rounded-xl border border-outline-variant dark:border-on-surface-variant/30 flex flex-col items-center">
+                            <div className="relative group cursor-pointer">
+                                <div className="h-32 w-32 rounded-full overflow-hidden border-4 border-surface-container dark:border-on-surface-variant/20 shadow-inner">
+                                    <img 
+                                        alt="User Profile" 
+                                        className="h-full w-full object-cover transition-opacity group-hover:opacity-70" 
+                                        src="https://lh3.googleusercontent.com/aida/ADBb0uglTbiB6BstAbdnKqXzx3Jmn5csg1OAwMaveKX9pMeoVDvIe_4EIXubhfeBY_VxJB68gOy9PQGtt1WligtHEznqKvEhECZm2U7cOk2HOiHid_fpQrzxh9VAix6IT08CoErGlHFfOZxYcsV-tyVG2vYO0NwJ3iIEZvBoBiBAL_1zjJiClgIcHOm5XCbBzTzie2cazJoDZsRv4FxgNGwp4xsWcoH_LRsQ3V135l7RUB6Rn8L8v_CF9UNuNA" 
+                                    />
                                 </div>
-                                <div className="flex flex-col gap-xs">
-                                    <label className="font-label-md text-on-surface-variant">Email Address</label>
-                                    <input className="bg-surface border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md" type="email" value="arif.r@gibangladesh.com" />
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span className="material-symbols-outlined text-white text-3xl">photo_camera</span>
                                 </div>
                             </div>
-                            {/* <!-- Bio --> */}
-                            <div className="flex flex-col gap-xs">
-                                <label className="font-label-md text-on-surface-variant">Professional Bio</label>
-                                <textarea className="bg-surface border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md resize-none" rows={4}>Digital strategist specializing in Bangladesh's Geographical Indication products. Passionate about bringing traditional heritage to the global SaaS ecosystem.</textarea>
-                                <p className="text-right font-label-sm text-outline">142/500 characters</p>
+                            <h3 className="font-h3 text-h3 mt-lg dark:text-inverse-on-surface">Rahima Akter</h3>
+                            <p className="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant">GI Enthusiast & Storyteller</p>
+                            <button className="mt-lg text-primary dark:text-primary-fixed-dim font-label-md hover:underline cursor-pointer">Change Avatar</button>
+                        </div>
+                    </div>
+
+                    {/* <!-- Settings Form --> */}
+                    <div className="lg:col-span-8 space-y-xl">
+                        {/* <!-- Personal Info --> */}
+                        <div className="bg-white dark:bg-on-surface p-xl rounded-xl border border-outline-variant dark:border-on-surface-variant/30 space-y-xl">
+                            <h2 className="font-h3 text-h3 text-primary dark:text-primary-fixed-dim">Personal Information</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                                <div className="space-y-xs">
+                                    <label className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">Full Name</label>
+                                    <input 
+                                        className="w-full px-md py-sm bg-white dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-inverse-on-surface" 
+                                        type="text" 
+                                        defaultValue="Rahima Akter" 
+                                    />
+                                </div>
+                                <div className="space-y-xs">
+                                    <label className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">Email Address</label>
+                                    <input 
+                                        className="w-full px-md py-sm bg-surface-container dark:bg-on-surface-variant/20 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg outline-none text-on-surface-variant dark:text-outline-variant cursor-not-allowed" 
+                                        type="email" 
+                                        defaultValue="rahima.akter@example.com" 
+                                        disabled 
+                                    />
+                                </div>
                             </div>
-                            <div className="h-[1px] bg-outline-variant w-full my-lg"></div>
-                            {/* <!-- password --> */}
-                            <div className="space-y-md">
-                                <h4 className="font-label-md font-bold text-on-surface uppercase tracking-wider">Password Settings</h4>
-                                <div className="flex flex-col gap-xs">
-                                    <label className="font-label-md text-on-surface-variant">Current Password</label>
+                            <div className="space-y-xs">
+                                <label className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">Short Bio</label>
+                                <textarea 
+                                    className="w-full px-md py-sm bg-white dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-inverse-on-surface resize-none" 
+                                    rows={4} 
+                                    defaultValue="Exploring the rich heritage of Bangladesh through its GI products. Passionate about Jamdani weaving and Rajshahi Silk."
+                                ></textarea>
+                            </div>
+                        </div>
 
-                                    <div className="flex items-center bg-surface border border-outline-variant rounded-lg focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary overflow-hidden relative">
-
-                                        <input
-                                            className="grow bg-transparent border-none focus:ring-0 px-md py-sm font-body-md"
-                                            placeholder="•••••••••••"
-                                            type={showCurrent ? 'text' : 'password'}
+                        {/* <!-- Security --> */}
+                        <div className="bg-white dark:bg-on-surface p-xl rounded-xl border border-outline-variant dark:border-on-surface-variant/30 space-y-xl">
+                            <h2 className="font-h3 text-h3 text-primary dark:text-primary-fixed-dim">Security</h2>
+                            <div className="space-y-lg">
+                                <div className="space-y-xs">
+                                    <label className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">Current Password</label>
+                                    <div className="relative">
+                                        <input 
+                                            className="w-full px-md py-sm bg-white dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-inverse-on-surface" 
+                                            type={showCurrent ? "text" : "password"} 
+                                            placeholder="••••••••" 
                                         />
-                                        <button
-                                            type="button"
-                                            className="absolute right-5 top-1/2 -translate-y-1/2"
+                                        <button 
                                             onClick={() => setShowCurrent(!showCurrent)}
+                                            className="absolute right-md top-1/2 -translate-y-1/2 text-outline dark:text-on-surface-variant/50 cursor-pointer focus:outline-none"
                                         >
-                                            {showCurrent ? <IconEyeClosed /> : <IconEye />}
+                                            {showCurrent ? <IconEyeClosed size={20} /> : <IconEye size={20} />}
                                         </button>
                                     </div>
                                 </div>
-                                <div className="flex flex-col gap-xs">
-                                    <label className="font-label-md text-on-surface-variant">New Password</label>
-                                    <div className="flex items-center bg-surface border border-outline-variant rounded-lg focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary overflow-hidden relative">
-                                        <input
-                                            className="flex-grow bg-transparent border-none focus:ring-0 px-md py-sm font-body-md"
-                                            placeholder="•••••••••••"
-                                            type={showNew ? 'text' : 'password'}
+                                <div className="space-y-xs">
+                                    <label className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">New Password</label>
+                                    <div className="relative">
+                                        <input 
+                                            className="w-full px-md py-sm bg-white dark:bg-on-surface-variant/10 border border-outline-variant dark:border-on-surface-variant/30 rounded-lg focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-inverse-on-surface" 
+                                            type={showNew ? "text" : "password"} 
+                                            placeholder="Leave blank to keep current" 
                                         />
-                                        <button
-                                            type="button"
-                                            className="absolute right-5 top-1/2 -translate-y-1/2"
+                                        <button 
                                             onClick={() => setShowNew(!showNew)}
+                                            className="absolute right-md top-1/2 -translate-y-1/2 text-outline dark:text-on-surface-variant/50 cursor-pointer focus:outline-none"
                                         >
-                                            {showNew ? <IconEyeClosed /> : <IconEye />}
+                                            {showNew ? <IconEyeClosed size={20} /> : <IconEye size={20} />}
                                         </button>
                                     </div>
                                 </div>
+                                <div className="flex items-center justify-between p-md bg-surface-container dark:bg-on-surface-variant/10 rounded-lg border border-outline-variant dark:border-on-surface-variant/30">
+                                    <div>
+                                        <div className="font-label-md text-label-md dark:text-inverse-on-surface">Two-Factor Authentication</div>
+                                        <div className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">Add an extra layer of security to your account</div>
+                                    </div>
+                                    <div className="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+                                        <div className="absolute right-1 top-1 h-4 w-4 bg-white rounded-full transition-all"></div>
+                                    </div>
+                                </div>
                             </div>
-                            {/* <!-- Actions --> */}
-                            <div className="flex justify-end items-center gap-md pt-lg">
-                                <button className="text-primary font-label-md px-lg py-sm hover:bg-surface-container-high rounded-lg transition-all" type="button">Cancel</button>
-                                <button className="bg-primary text-on-primary px-2xl py-sm rounded-lg font-label-md shadow-sm hover:opacity-90 active:scale-95 transition-all" type="submit">Save Changes</button>
-                            </div>
-                        </form>
+                        </div>
+
+                        {/* <!-- Danger Zone --> */}
+                        <div className="bg-white dark:bg-on-surface p-xl rounded-xl border border-error/20 space-y-md">
+                            <h2 className="font-h3 text-h3 text-error">Danger Zone</h2>
+                            <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">Permanently delete your account and all associated data. This action cannot be undone.</p>
+                            <button className="px-lg py-sm border border-error text-error rounded-lg font-label-md text-label-md hover:bg-error/10 transition-all cursor-pointer">Delete Account</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    );
 }
