@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --background: #faf8ff;
+    --foreground: #1a1b20;
+    --font-inter: "Inter", sans-serif;
+  }
+
+  :root.dark {
+    --background: #1a1b20;
+    --foreground: #faf8ff;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter);
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+}
+
+@layer utilities {
+
+  .font-h1,
+  .font-h2,
+  .font-h3 {
+    font-family: var(--font-inter);
+  }
+
+  .font-body-lg,
+  .font-body-md,
+  .font-body-sm,
+  .font-label-md,
+  .font-label-sm {
+    font-family: var(--font-inter);
+  }
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #2f3036;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #444651;
+  border-radius: 4px;
+}
