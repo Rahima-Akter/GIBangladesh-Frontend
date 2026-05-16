@@ -8,7 +8,7 @@ import { useState, useRef, useEffect } from 'react';
 // ─── Hardcoded auth state (swap with real auth later) ───────────────────────
 const MOCK_USER = {
   isLoggedIn: true,
-  role: 'user' as 'user' | 'admin' | 'super-admin', // change to test roles
+  role: 'admin' as 'user' | 'admin' | 'super-admin', // change to test roles
   name: 'Rahim Uddin',
   avatar: null as string | null,
 };
@@ -183,7 +183,7 @@ export default function Navbar() {
                       <div className="p-sm flex flex-col gap-xs">
                         {/* Role-based primary action */}
                         <Link
-                          href={isAdmin ? '/dashboard' : '/profile'}
+                          href={isAdmin ? '/dashboard/admin/overview' : '/profile'}
                           onClick={() => setDropdownOpen(false)}
                           className="flex items-center gap-sm px-sm py-sm rounded-lg text-label-md text-primary dark:text-primary-fixed-dim hover:bg-surface-container dark:hover:bg-on-surface-variant/20 transition-all duration-150"
                         >
