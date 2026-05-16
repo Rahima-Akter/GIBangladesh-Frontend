@@ -1,3 +1,5 @@
-export function CommentsModerationPage() {
-  return <div>comments</div>;
+import CommentModeration from "@/components/modules/dashboard/comment-moderation/CommentModeration";
+
+export default function CommentsModerationPage() {
+  return <CommentModeration />;
 }
