@@ -1,3 +1,5 @@
-export function ProductModerationPage() {
-  return <div> Product Moderation </div>;
+import ProductModeration from "@/components/modules/dashboard/product-moderation/ProductModeration";
+
+export default function ProductModerationPage() {
+  return <ProductModeration />;
 }
