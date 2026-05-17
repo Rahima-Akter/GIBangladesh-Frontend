@@ -1,3 +1,5 @@
-export function AnalyticsPage() {
-  return <div>Analytics</div>;
+import Analytics from "@/components/modules/dashboard/analytics/Analytics";
+
+export default function AnalyticsPage() {
+  return <Analytics />;
 }
