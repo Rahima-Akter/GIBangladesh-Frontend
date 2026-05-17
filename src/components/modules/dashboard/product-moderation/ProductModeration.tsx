@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductModeration = () => {
   return (
@@ -8,74 +9,90 @@ const ProductModeration = () => {
         <div className="mx-auto">
           {/* <!-- Stats Section --> */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-lg mb-md">
-            <div className="bg-primary-container p-lg rounded-xl flex flex-col justify-between text-white border border-primary/20 shadow-md">
-              <p
-                className="material-symbols-outlined flex justify-between items-center"
-                data-icon="pending_actions"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                pending_actions
-                <span className="font-h1 text-h2 ml-3">42</span>
-              </p>
+            <div className="bg-surface dark:bg-inverse-surface border border-outline-variant dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary-fixed-dim/40 transition-all p-lg rounded-xl flex flex-col shadow-md">
 
-              <div>
-                <h4 className="font-label-md text-label-md opacity-80">
-                  Pending Requests
-                </h4>
+              <div className="flex items-center">
+                <div className="h-10 w-10 rounded-lg bg-secondary/10 dark:bg-primary-fixed-dim/15 flex items-center justify-center">
+                  <span
+                    className="material-symbols-outlined text-primary dark:text-primary-fixed text-h1 leading-none"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    pending_actions
+                  </span>
+                </div>
+
+                <p className="font-h1 text-h1 leading-none ml-2 text-on-surface dark:text-inverse-on-surface">
+                  42
+                </p>
               </div>
+
+              <h4 className="mt-1 font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">
+                Pending Requests
+              </h4>
             </div>
-            <div className="bg-surface-container-lowest dark:bg-surface-container-low p-lg rounded-xl border border-outline-variant flex flex-col justify-between shadow-sm">
-              <p
-                className="material-symbols-outlined text-secondary flex justify-between items-center "
-                data-icon="task_alt"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                task_alt
-                <span className="font-h1 text-h2 ml-3 text-primary dark:text-primary-fixed">
+            <div className="bg-surface dark:bg-inverse-surface border border-outline-variant dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary-fixed-dim/40 transition-all p-lg rounded-xl flex flex-col shadow-md">
+
+              <div className="flex items-center">
+                <div className="h-10 w-10 rounded-lg bg-secondary/10 dark:bg-primary-fixed-dim/15 flex items-center justify-center">
+                  <span
+                    className="material-symbols-outlined text-secondary dark:text-primary-fixed text-h1 leading-none"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    task_alt
+                  </span>
+                </div>
+
+                <span className="font-h1 text-h1 leading-none ml-2 text-on-surface dark:text-inverse-on-surface">
                   128
                 </span>
-              </p>
-              <h4 className="font-label-md text-label-md opacity-80">
+              </div>
+
+              <h4 className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant mt-1">
                 Verified This Month
               </h4>
             </div>
-            <div className="bg- bg-error/4 dark:bg-surface-container-low p-lg rounded-xl border border-outline-variant flex flex-col justify-between shadow-sm">
-              <div className="">
-                <p
-                  className="material-symbols-outlined text-error flex justify-between items-center"
-                  data-icon="warning"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  warning
-                  <span className="font-h1 text-h2 ml-3 text-error">7</span>
-                </p>
+
+            <div className="bg-surface dark:bg-inverse-surface border border-outline-variant dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary-fixed-dim/40 transition-all p-lg rounded-xl flex flex-col shadow-md">
+
+              <div className="flex items-center">
+                <div className="h-10 w-10 rounded-lg bg-error/10 dark:bg-primary-fixed-dim/15 flex items-center justify-center">
+                  <span
+                    className="material-symbols-outlined text-error dark:text-primary-fixed text-h1 leading-none"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    warning
+                  </span>
+                </div>
+
+                <span className="font-h1 text-h1 leading-none ml-2 text-on-surface dark:text-inverse-on-surface">
+                  7
+                </span>
               </div>
-              <div>
-                <h4 className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant">
-                  Flagged Items
-                </h4>
-              </div>
+
+              <h4 className="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant mt-1">
+                Flagged Items
+              </h4>
             </div>
           </div>
           {/* <!-- Filter Actions --> */}
           <div className="flex justify-between items-center">
-            <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-md mb-lg">
+            <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-md mb-lg w-full dark:bg-inverse-surface dark:border-gray-700">
               <div className="grid grid-cols-12 gap-md items-center">
                 <div className="md:col-span-4 col-span-12 relative">
                   <span
-                    className="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline dark:text-gray-400"
                     data-icon="search"
                   >
                     search
                   </span>
                   <input
-                    className="w-full pl-10 pr-md py-sm bg-white border border-outline-variant rounded-lg text-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                    className="w-full pl-10 pr-md py-sm bg-white border border-outline-variant rounded-lg text-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none dark:bg-[#14161c] dark:border-gray-700 dark:text-gray-300"
                     placeholder="Filter by name, email, or role..."
                     type="text"
                   />
                 </div>
                 <div className="md:col-span-2 col-span-6">
-                  <select className="w-full px-md py-sm bg-white border border-outline-variant rounded-lg text-body-sm appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer">
+                  <select className="w-full px-md py-sm bg-white border border-outline-variant rounded-lg text-body-sm appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer dark:bg-[#14161c] dark:border-gray-700 dark:text-gray-300">
                     <option value="">All Roles</option>
                     <option value="admin">Admin</option>
                     <option value="artisan">Artisan</option>
@@ -83,14 +100,14 @@ const ProductModeration = () => {
                   </select>
                 </div>
                 <div className="md:col-span-2 col-span-6">
-                  <select className="w-full px-md py-sm bg-white border border-outline-variant rounded-lg text-body-sm appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer">
+                  <select className="w-full px-md py-sm bg-white border border-outline-variant rounded-lg text-body-sm appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer dark:bg-[#14161c] dark:border-gray-700 dark:text-gray-300">
                     <option value="">Status</option>
                     <option value="active">Active</option>
                     <option value="suspended">Suspended</option>
                   </select>
                 </div>
                 <div className="md:col-span-2 col-span-6">
-                  <button className="w-full px-md py-sm border border-outline-variant text-on-surface-variant rounded-lg font-label-md text-label-md flex items-center justify-center gap-xs hover:bg-surface-variant transition-colors">
+                  <button className="w-full px-md py-sm border border-outline-variant text-on-surface-variant rounded-lg font-label-md text-label-md flex items-center justify-center gap-xs hover:bg-surface-variant  dark:hover:bg-inverse-surface transition-colors dark:border-gray-700 dark:text-gray-300 dark:bg-[#14161c] cursor-pointer">
                     <span
                       className="material-symbols-outlined text-[18px]"
                       data-icon="filter_list"
@@ -100,7 +117,7 @@ const ProductModeration = () => {
                     More Filters
                   </button>
                 </div>
-                <button className="md:col-span-2 col-span-6 bg-primary text-white font-label-md text-label-md px-md py-sm rounded-lg hover:bg-primary/90 transition-all shadow-md flex items-center gap-sm">
+                <Link href="/dashboard/admin/add-product" className="md:col-span-2 col-span-6 bg-primary text-white font-label-md text-label-md px-md py-sm rounded-lg hover:bg-primary/90 transition-all shadow-md flex items-center gap-sm justify-center cursor-pointer whitespace-nowrap dark:hover:bg-blue-800">
                   <span
                     className="material-symbols-outlined text-[18px]"
                     data-icon="add"
@@ -108,37 +125,36 @@ const ProductModeration = () => {
                     add
                   </span>
                   Add a Product
-                </button>
+                </Link>
               </div>
             </div>
           </div>
 
-          {/* <!-- Main Requests Table Container --> */}
-          <div className="col-span-12 lg:col-span-8 bg-surface-container-lowest dark:bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm">
-            <div className="overflow-x-auto">
+          <div className="col-span-12 lg:col-span-8 bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-xl overflow-hidden flex flex-col shadow-sm dark:border-gray-700">
+            <div className="overflow-x-auto dark:bg-on-surface">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-surface-container-low dark:bg-surface-container-high border-b border-outline-variant">
-                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-wider">
+                  <tr className="bg-surface-container dark:bg-[#14161c] border-b border-outline-variant dark:border-gray-700">
+                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-gray-300 uppercase tracking-wider">
                       Product &amp; Entity
                     </th>
-                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-wider">
+                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-gray-300 uppercase tracking-wider">
                       Date
                     </th>
-                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-wider">
+                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-gray-300 uppercase tracking-wider">
                       Status
                     </th>
-                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant uppercase tracking-wider text-right">
+                    <th className="px-lg py-md font-label-sm text-label-sm text-on-surface-variant dark:text-gray-300 uppercase tracking-wider text-right">
                       Actions
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-outline-variant">
+                <tbody className="divide-y divide-outline-variant dark:divide-gray-700">
                   {/* <!-- Request Item 1 --> */}
-                  <tr className="hover:bg-surface-container transition-colors group">
+                  <tr className="hover:bg-gray-950/30 transition-colors group">
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-md">
-                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant">
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant dark:border-gray-700">
                           <Image
                             width={100}
                             height={100}
@@ -163,30 +179,30 @@ const ProductModeration = () => {
                       </p>
                     </td>
                     <td className="px-lg py-md">
-                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-sm"></span>
+                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm dark:text-purple-100">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-sm dark:bg-purple-900"></span>
                         Pending
                       </span>
                     </td>
                     <td className="px-lg py-md">
                       <div className="flex items-center justify-end gap-xs">
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-teal-600 text-primary dark:text-white font-label-sm text-label-sm rounded border border-outline-variant dark:hover:bg-teal-700 hover:bg-primary-container hover:text-white transition-all dark:border-gray-700 cursor-pointer">
                           Edit
                         </button>
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-error text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all dark:text-white dark:hover:bg-error/80 dark:border-gray-700 cursor-pointer">
                           Delete
                         </button>
-                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all">
+                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all dark:bg-blue-700 dark:hover:bg-blue-800 cursor-pointer">
                           Activate
                         </button>
                       </div>
                     </td>
                   </tr>
                   {/* <!-- Request Item 2 --> */}
-                  <tr className="bg-surface-container-low/50 dark:bg-surface-container-highest/5 hover:bg-surface-container transition-colors group">
+                  <tr className="hover:bg-gray-950/30 transition-colors group">
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-md">
-                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-primary-container">
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-primary-container dark:border-gray-700">
                           <span
                             className="material-symbols-outlined"
                             data-icon="restaurant"
@@ -217,23 +233,23 @@ const ProductModeration = () => {
                     </td>
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-xs">
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all dark:border-gray-700">
                           Edit
                         </button>
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all dark:text-red-400 dark:border-gray-700">
                           Delete
                         </button>
-                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all">
+                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all dark:text-gray-400">
                           Activate
                         </button>
                       </div>
                     </td>
                   </tr>
                   {/* <!-- Request Item 3 --> */}
-                  <tr className="hover:bg-surface-container transition-colors group">
+                  <tr className="hover:bg-gray-950/30 transition-colors group">
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-md">
-                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-tertiary">
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-tertiary dark:border-gray-700 dark:text-teal-400">
                           <span
                             className="material-symbols-outlined"
                             data-icon="agriculture"
@@ -257,30 +273,30 @@ const ProductModeration = () => {
                       </p>
                     </td>
                     <td className="px-lg py-md">
-                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-error-container/30 text-error font-label-sm text-label-sm">
+                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-error-container/30 text-error font-label-sm text-label-sm dark:text-red-400">
                         <span className="w-1.5 h-1.5 rounded-full bg-error mr-sm"></span>
                         Flagged
                       </span>
                     </td>
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-xs">
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all dark:border-gray-700">
                           Edit
                         </button>
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all dark:text-red-400 dark:border-gray-700">
                           Delete
                         </button>
-                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all">
+                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all dark:text-gray-400">
                           Activate
                         </button>
                       </div>
                     </td>
                   </tr>
                   {/* <!-- Request Item 4 --> */}
-                  <tr className="bg-surface-container-low/50 dark:bg-surface-container-highest/5 hover:bg-surface-container transition-colors group">
+                  <tr className="hover:bg-gray-950/30 transition-colors group">
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-md">
-                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-secondary">
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-secondary dark:border-gray-700 dark:text-purple-400">
                           <span
                             className="material-symbols-outlined"
                             data-icon="coffee"
@@ -304,30 +320,30 @@ const ProductModeration = () => {
                       </p>
                     </td>
                     <td className="px-lg py-md">
-                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-sm"></span>
+                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm dark:text-purple-100">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-sm dark:bg-purple-900"></span>
                         Pending
                       </span>
                     </td>
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-xs">
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all dark:border-gray-700">
                           Edit
                         </button>
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all dark:text-red-400 dark:border-gray-700">
                           Delete
                         </button>
-                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all">
+                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all dark:text-gray-400">
                           Activate
                         </button>
                       </div>
                     </td>
                   </tr>
                   {/* <!-- Request Item 5 --> */}
-                  <tr className="hover:bg-surface-container transition-colors group">
+                  <tr className="hover:bg-gray-950/30 transition-colors group">
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-md">
-                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-on-surface-variant">
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant text-on-surface-variant dark:border-gray-700 dark:text-gray-300">
                           <span
                             className="material-symbols-outlined"
                             data-icon="category"
@@ -351,20 +367,20 @@ const ProductModeration = () => {
                       </p>
                     </td>
                     <td className="px-lg py-md">
-                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-sm"></span>
+                      <span className="inline-flex items-center px-sm py-xs rounded-full bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm dark:text-purple-100">
+                        <span className="w-1.5 h-1.5 rounded-full bg-secondary-container mr-sm dark:bg-purple-900"></span>
                         Pending
                       </span>
                     </td>
                     <td className="px-lg py-md">
                       <div className="flex items-center gap-xs">
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed font-label-sm text-label-sm rounded border border-outline-variant hover:bg-primary-container hover:text-white transition-all dark:border-gray-700">
                           Edit
                         </button>
-                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all">
+                        <button className="px-sm py-xs bg-surface-container-high dark:bg-surface-container-highest text-error font-label-sm text-label-sm rounded border border-outline-variant hover:bg-error-container hover:text-on-error-container transition-all dark:text-red-400 dark:border-gray-700">
                           Delete
                         </button>
-                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all">
+                        <button className="px-sm py-xs bg-primary text-white font-label-sm text-label-sm rounded border border-primary hover:bg-primary/90 transition-all dark:text-gray-400">
                           Activate
                         </button>
                       </div>
@@ -373,12 +389,12 @@ const ProductModeration = () => {
                 </tbody>
               </table>
             </div>
-            <div className="mt-auto px-lg py-md border-t border-outline-variant bg-surface-container-low dark:bg-surface-container-high flex md:flex-row flex-col space-y-3 items-center justify-between">
+            <div className="mt-auto px-lg py-md border-t border-outline-variant bg-surface-container-low dark:bg-[#14161c] flex md:flex-row flex-col space-y-3 items-center justify-between dark:border-gray-700">
               <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">
                 Showing 5 of 42 pending requests
               </p>
               <div className="flex gap-xs">
-                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors">
+                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors dark:border-gray-700">
                   <span
                     className="material-symbols-outlined text-[18px] dark:text-white"
                     data-icon="chevron_left"
@@ -386,16 +402,16 @@ const ProductModeration = () => {
                     chevron_left
                   </span>
                 </button>
-                <button className="w-8 h-8 flex items-center justify-center rounded border border-primary bg-primary text-white font-label-sm text-label-sm shadow-sm">
+                <button className="w-8 h-8 flex items-center justify-center rounded border border-primary bg-primary text-white font-label-sm text-label-sm shadow-sm dark:text-gray-400">
                   1
                 </button>
-                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm dark:text-white">
+                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm dark:text-white dark:border-gray-700">
                   2
                 </button>
-                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm dark:text-white">
+                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest font-label-sm text-label-sm dark:text-white dark:border-gray-700">
                   3
                 </button>
-                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors">
+                <button className="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors dark:border-gray-700">
                   <span
                     className="material-symbols-outlined text-[18px] dark:text-white"
                     data-icon="chevron_right"
